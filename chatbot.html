@@ -53,27 +53,55 @@
         );
       }
 
+      function ChatMessage() {
+ const ChatMessage = [{
+          message: 'hello nko_bot',
+          sender: 'user',
+          id: 'id1'
+        }, {
+          message: 'hello how can i help you',
+          sender: 'NKO_bot',
+          id: 'id2'
+        }, {
+          message: 'can you get me todays date?',
+          sender: 'user',
+          id: 'id3'
+        }, {
+          message: 'today is August 25',
+          sender: 'NKO_bot',
+          id: 'id4'
+        }];   
+
+
+        function sendMessage() {
+          console.log('send message' );
+        }
+
+        return(
+          <>
+
+            <button onClick={sendMessage}>send Messages</button>
+
+            {chatMessage.map((chatMessage) => {
+                  return (
+                    <ChatMessage
+                      message={chatMessage.message}
+                      sender={chatMessage.sender}
+                      key={chatMessage.id}
+                    />
+                  );
+                })}
+          </>
+        );
+      }
+
       function App () {
+      
         return (
           <>
             <h1>To NKO_Gallardo</h1>
             <ChatInput />
-            <ChatMessage 
-              message="Hi NKO_bot" 
-              sender="user" 
-            />
-            <ChatMessage 
-              message="Hello how can i help you" 
-              sender="NKO_bot" 
-            />
-            <ChatMessage 
-              message="can you get me todays date?" 
-              sender="user"
-            />
-            <ChatMessage 
-              message="Today is August 25" 
-              sender="NKO_bot" 
-            />
+            <ChatMessage />
           </>
         );
       }
