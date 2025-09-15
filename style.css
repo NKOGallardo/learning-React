@@ -1,0 +1,81 @@
+body {
+    background-color: rgb(23, 23, 23);
+    color: white;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* Center horizontally */
+    justify-content: center; /* Center vertically */
+}
+
+/* Navigation */
+
+nav {
+    background-color: #000000;
+    text-align: center;
+    margin: 20px auto;      /* Center nav horizontally */
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-radius: 40px;
+    display: inline-block;  /* Shrink nav to fit content */
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+}
+
+nav a:hover {
+    color: #00e0ff;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Intro text */
+
+.Intro {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin: 20px auto;      /* Center intro horizontally */
+    font-size: 1.2em;
+    color: #ccc;
+    max-width: 600px;
+}
+
+/* Text in the To_Do_List */
+
+.To_Do_List {
+    display: block;
+}
+
+.To_Do_List h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.To_Do_List label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
